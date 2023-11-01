@@ -21,7 +21,7 @@ const UpdateBooks = () => {
     setLoading(true);
 
     axios
-      .get(`http://localhost:3000/books/${id}`)
+      .get(`https://mern-book-management-app.onrender.com/books/${id}`)
       .then((response) => {
         setTitle(response.data.name);
         setAuthor(response.data.author);
@@ -43,7 +43,7 @@ const UpdateBooks = () => {
     };
 
     axios
-      .put(`http://localhost:3000/books/${id}`, data)
+      .put(`https://mern-book-management-app.onrender.com/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Updated Successfully!", { variant: "success" });

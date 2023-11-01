@@ -11,26 +11,11 @@ const ShowBooks = () => {
 
   const { id } = useParams();
 
-  // useEffect(() => {
-  //   setLoading(true);
-
-  //   axios
-  //     .get(`http://localhost:3000/books/${id}`)
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       setBook(response.data);
-  //       setLoading(false);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
-
   useEffect(() => {
     setLoading(true);
     console.log("id: ", id);
     axios
-      .get(`http://localhost:3000/books/${id}`)
+      .get(`https://mern-book-management-app.onrender.com/books/${id}`)
       .then((response) => {
         console.log("response", response.data);
         setBook(response.data);

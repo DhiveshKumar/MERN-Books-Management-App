@@ -20,7 +20,7 @@ const Home = () => {
     setLoading(true);
 
     axios
-      .get("http://localhost:3000/books/")
+      .get("https://mern-book-management-app.onrender.com/books/")
       .then((response) => {
         console.log("Response.data: ", response.data);
         setBooks(response.data.data);
